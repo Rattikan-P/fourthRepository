@@ -1,0 +1,47 @@
+name: Second Bug Report
+description: File a bug report.
+title: "Feature: "
+labels: []
+projects: []
+assignees:
+  - octocat
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: What is your name?
+      placeholder: "ex. Sertha Taweewattana"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: request
+    attributes:
+      label: Type of request
+      description: Select the type of your request
+      options:
+        - New feature
+        - Bug
+    validations:
+      required: false
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: What is the OS which you want to suggest?
+      multiple: true
+      options:
+        - Windows
+        - Mac
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What are the details of your suggestion?
+      description: Explain what you want.
+      placeholder: "Feature details!"
+    validations:
+      required: false
